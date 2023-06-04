@@ -10,14 +10,17 @@ while feeling_brave:
     print('A ghost behind one .')
     print('which door do you open?')
     door = input('1,2, 3 or 4?')
-    door_num = int(door)
-    if door_num == ghost_door:
-        print('GHOST!')
-        feeling_brave = False
-    else:
-        print ('No ghost!')
-        print('You enter the next room.')
-        score = score + 1
+    try:
+        door_num = int(door)
+        if door_num == ghost_door:
+            print('GHOST!')
+            feeling_brave = False
+        else:
+            print ('No ghost!')
+            print('You enter the next room.')
+            score = score + 1
+    except ValueError:
+        print('Thats not a number !!')
 print('Run away!')
 print('Game over! You scored ', score)
 
