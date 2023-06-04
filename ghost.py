@@ -15,6 +15,9 @@ while feeling_brave:
         if door_num == ghost_door:
             print('GHOST!')
             feeling_brave = False
+        elif door_num > 4:
+            print('Dont cheat - number less than 4 please - deduct a point !!')
+            score = score -1 
         else:
             print ('No ghost!')
             print('You enter the next room.')
